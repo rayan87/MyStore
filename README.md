@@ -1,14 +1,18 @@
-# MyStore
+# My Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+My Store is an e-commerce website that leverages angular features.
 
-## Development server
+## Installation & running
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` to install packages
+Run `ng serve` to run the application
 
-## Code scaffolding
+## Project features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Display all product list
+Display product details
+Add to cart
+Checkout order
 
 ## Build
 

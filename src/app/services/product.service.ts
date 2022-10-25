@@ -17,11 +17,4 @@ export class ProductService {
     return this.getAllProducts()
       .pipe(map(products => products.find(p => p.id === id)));
   }
-
-  getProducts(ids : number[]) : Observable<Product[]> {
-    let x = ids.findIndex(p => p == 1)
-    return this.getAllProducts()
-      .pipe(map(products => products.filter((p : Product) => 
-        ids.findIndex(id => p.id == id) !== -1)));
-  }
 }

@@ -22,7 +22,7 @@ export class AddToCartComponent implements OnInit {
 
   addToCart() : void {
     this.cartService.addToCart(this.product, this.selectedQuantity);
-    alert('Added to cart!');
+    alert(`Added to cart!`);
   }
 
   populateQuantityOptions() : void {

@@ -13,17 +13,34 @@ button {
     background: #33B5E5;
     color: #fff;
     font-weight: bold;
-    padding: 7px;
+    padding: 7px 15px;
     border: #11546d;
     cursor: pointer;
     border-radius: 4px;
     box-shadow: 5px;
+    font-size:13px;
 }
 
 button:hover{
  background-color: #25a2cf;   
 }
 
+button.btn-red {
+    background:rgb(185, 8, 8);
+    border:rgb(117, 3, 3);
+}
+
+
+button.btn-red:hover {
+    background:rgb(136, 4, 4);
+    border:rgb(117, 3, 3);
+}
+
 input, select {
     padding: 7px;
+    font-size:16px;
+}
+
+p {
+    margin: 10px 0;
 }

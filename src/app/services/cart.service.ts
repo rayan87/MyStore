@@ -5,8 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
 
-  //ProductId, Quantity
-  cart : CartItem[] = [];
+  private cart : CartItem[] = [];
 
   constructor() {  }
 
@@ -23,6 +22,10 @@ export class CartService {
       currentCartItem.subTotal = currentCartItem.quantity * product.price;
   }
 
+  deleteItem(productId : number) : void {
+    this.cart = this.cart.filter(item => item.product.id != productId);
+  }
+
   setCartItemQuantity(productId : number, quantity: number) {
     const cartItem = this.cart.find(item => item.product.id == productId);
     if (cartItem != undefined) {
@@ -31,8 +34,18 @@ export class CartService {
     }
   }
 
+  clearCart() : void {
+    this.cart = [];
+  }
+
   getCartItems() : CartItem[] {
     return this.cart;
+  }
+
+  getCartTotalAmount() : number {
+    let totalAmount : number = 0;
+    this.cart.map(item => totalAmount += item.subTotal);
+    return totalAmount;
   }
 
 

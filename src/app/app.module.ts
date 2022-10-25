@@ -12,6 +12,8 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     ProductItemDetailComponent,
     AddToCartComponent,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    CheckoutComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

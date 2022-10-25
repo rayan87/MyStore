@@ -1,0 +1,24 @@
+.form-group {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display:block;
+    margin: 5px 0;
+}
+
+.form-group input {
+    width: 280px;
+}
+
+.form-group .help-block {
+    color: #6d6868;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.error {
+    color: rgb(223, 23, 23);
+}

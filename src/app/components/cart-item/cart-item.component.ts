@@ -7,24 +7,25 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CartItemComponent implements OnInit {
 
-  @Input() cartItem : CartItem;
-  @Output() cartItemQuantity : EventEmitter<number>;
+  @Input('cartItem') cartItem? : CartItem;
+  @Output() quantityChanged : EventEmitter<number>;
+  @Output() itemDeleted : EventEmitter<void>;
 
   constructor() { 
-    this.cartItem = {
-      product: { id: 0, name: '', description: '', price: 0, url: ''},
-      quantity: 0,
-      subTotal: 0
-    }
-
-    this.cartItemQuantity = new EventEmitter();
+    this.quantityChanged = new EventEmitter();
+    this.itemDeleted = new EventEmitter();
   }
 
   ngOnInit(): void {
+    
   }
 
   changeQuantity() {
-    this.cartItemQuantity.emit(this.cartItem.quantity);
+    this.quantityChanged.emit(this.cartItem?.quantity);
+  }
+
+  deleteItem() {
+    this.itemDeleted.emit();
   }
 
 }

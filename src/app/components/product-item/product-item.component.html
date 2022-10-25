@@ -3,6 +3,6 @@
         <img [src]="product.url" alt="{{product.name}} image"  class="product-image">
     </a>
     <p class="product-name">{{ product.name }}</p>
-    <p>${{ product.price }}</p>
+    <p>{{ product.price | currency: 'USD' }}</p>
     <app-add-to-cart [product]="product"></app-add-to-cart>
 </div>

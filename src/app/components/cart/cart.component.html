@@ -1,22 +1,14 @@
 <div class="cart-container" *ngIf="cartItems.length > 0">
     <div class="cart-panel">
-        <app-cart-item *ngFor="let cartItem of cartItems" [cartItem]="cartItem" (cartItemQuantity)="changeQuantity(cartItem.product.id, $event)"></app-cart-item>
+        <app-cart-item *ngFor="let cartItem of cartItems" 
+            [cartItem]="cartItem" 
+            (quantityChanged)="changeQuantity(cartItem.product.id, $event)"
+            (itemDeleted)="deleteItem(cartItem.product.id)">
+        </app-cart-item>
+        <h3>Total: {{ totalAmount | currency: 'USD' }}</h3>
     </div>
     <div class="form-margin">
-        <form>
-            <div>
-                <label>Full name</label>
-                <input type="text">
-            </div>
-            <div>
-                <label>Address</label>
-                <input type="text">
-            </div>
-            <div>
-                <label>Credit card</label>
-                <input type="text" [maxLength]="16" [minLength]="16" placeholder="16 digit number">
-            </div>
-        </form>
+        <app-checkout></app-checkout>
     </div>
 </div>
 

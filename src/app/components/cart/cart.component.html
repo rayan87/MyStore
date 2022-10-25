@@ -1,0 +1,25 @@
+<div class="cart-container" *ngIf="cartItems.length > 0">
+    <div class="cart-panel">
+        <app-cart-item *ngFor="let cartItem of cartItems" [cartItem]="cartItem" (cartItemQuantity)="changeQuantity(cartItem.product.id, $event)"></app-cart-item>
+    </div>
+    <div class="form-margin">
+        <form>
+            <div>
+                <label>Full name</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Address</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Credit card</label>
+                <input type="text" [maxLength]="16" [minLength]="16" placeholder="16 digit number">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="empty-cart-message" *ngIf="cartItems.length == 0">
+    <p>No products added to cart. <a routerLink="/">Go to product list</a></p>
+</div>

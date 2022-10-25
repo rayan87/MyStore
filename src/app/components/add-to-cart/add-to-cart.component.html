@@ -1,0 +1,6 @@
+<form class="add-to-cart" (ngSubmit)="addToCart()">
+    <select class="select-input" [(ngModel)]="selectedQuantity" name="qty">
+        <option *ngFor="let quantityOption of quantityOptions" value="{{ quantityOption }}">{{ quantityOption }}</option>
+    </select>
+    <button>Add to Cart</button>
+</form>

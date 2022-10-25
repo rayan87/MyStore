@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Oxygen";
+    src: local("Oxygen"), url(./assets/fonts/Oxygen/Oxygen-Regular.ttf) format("truetype");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Oxygen", Arial, Helvetica, sans-serif;
+}
+
+button {
+    background: #33B5E5;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px;
+    border: #11546d;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 5px;
+}
+
+button:hover{
+ background-color: #25a2cf;   
+}
+
+input, select {
+    padding: 7px;
+}

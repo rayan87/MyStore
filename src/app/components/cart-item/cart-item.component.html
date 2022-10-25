@@ -1,0 +1,9 @@
+<div class="cart-item">
+    <img [src]="cartItem.product.url" alt="{{ cartItem.product.name }} image">
+
+    <div class="cart-item-details">
+        <h2>{{ cartItem.product.name }}</h2>
+        <p>${{ cartItem.subTotal }}</p>
+        <p>Amount <input type="number" [(ngModel)]="cartItem.quantity" (change)="changeQuantity()" [min]="1" [max]="10" class="number-input"></p>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.select-input {
+    width: 108px; 
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .add-to-cart button {
+    /* display:flex; */
+    display: block;
+  }

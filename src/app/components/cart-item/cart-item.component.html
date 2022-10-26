@@ -4,7 +4,7 @@
     <div class="cart-item-details">
         <h2>{{ cartItem.product.name }}</h2>
         <p>{{ cartItem.subTotal | currency: 'USD' }}</p>
-        <p>Amount <input type="number" [(ngModel)]="cartItem.quantity" (change)="changeQuantity()" [min]="1" class="number-input"></p>
+        <p>Amount <input type="number" [(ngModel)]="cartItem.quantity" (ngModelChange)="changeQuantity()" [min]="1" class="number-input"></p>
         <p><button class="btn-red" (click)="deleteItem()">Remove</button></p>
     </div>
 </div>
